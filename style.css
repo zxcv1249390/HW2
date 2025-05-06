@@ -11,7 +11,6 @@ body {
 
 .login-container {
     position: relative;
-    height: 550px;
     margin-top: -10vh;
     border-radius: 25px;
     background-color: #0e0e0e;
@@ -56,7 +55,15 @@ body {
     box-sizing: border-box;
 }
 
-
+.input-field label {
+    position: absolute;
+    left: 3%;
+    top: 15px;
+    color: #c2c5c3;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    font-size: 17px;
+}
 
 /*標籤動畫效果*/
 .input-field input:focus ~ label,
@@ -69,10 +76,14 @@ body {
 }
 
 /*點擊標籤變色*/
-.input-field input:focus,
-.input-field input:focus ~ label{
+.input-field input:focus {
+    border-color: #abc7f8;  /* 保持边框颜色不变 */
+    color: #9aa0a6;  /* 将输入文字改回原来的灰色 */
+}
+
+.input-field input:focus ~ label {
     border-color: #abc7f8;
-    color: #abc7f8;
+    color: #aac5f6;  /* 保持标签为淡蓝色 */
 }
 
 /*自動填入不要變白色*/
@@ -169,7 +180,7 @@ body {
         width: 100%;
         height: 100%;
         min-height: 550px;
-        border-radius: 0; /* 在全屏模式下可能需要移除圆角 */
+        border-radius: 0;
         margin-top: unset;
     }
 
@@ -182,17 +193,11 @@ body {
     }
 }
 
-/*窄 + 矮*/
-@media screen and (max-width: 630px) and (min-height: 550px){
-    body {
-        color: #0e0e0e;
-    }
-}
-
 /*中*/
 @media screen and (min-width: 630px) and (max-width: 900px) {
     .login-container {
         width: 500px;
+        height: 550px;
     }
 
     .login-container .navbar {
