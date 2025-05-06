@@ -11,7 +11,7 @@ body {
 
 .login-container {
     background-color: #0e0e0e;
-    height: 60vh;
+    height: 550px;
     border-radius: 25px;
     position: relative;
     margin-top: -10vh;
@@ -21,7 +21,6 @@ body {
 @media screen and (max-width: 630px) {
     .login-container {
         width: 100%;
-        max-width: 1000px;
         height: 100%;
         border-radius: 0; /* 在全屏模式下可能需要移除圆角 */
         margin-top: unset;
@@ -36,26 +35,28 @@ body {
     }
 }
 
+
+
 /*次窄*/
-@media screen and (min-width: 630px) and (max-width: 1000px) {
+@media screen and (min-width: 630px) and (max-width: 900px) {
     .login-container {
         width: 500px;
     }
 
-    body .navbar {
+    .login-container .navbar {
         width: 500px;
-        bottom: 180px;
+        bottom: -50px;
     }
 
 }
 
 /*寬*/
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 901px) {
     .login-container {
         width: 80%;
         min-width: 800px;
-        max-width: 1000px;
-        height: 43vh;
+        max-width: 900px;
+        height: 390px;
     }
 
     .login-container .input-field {
@@ -73,12 +74,9 @@ body {
         margin-right: 35px;  /* 可以根据需要调整数值大小 */
     }
 
-    body .navbar {
-        width: 80% !important;
-        min-width: 800px !important;
-        max-width: 1000px !important;
-        bottom: 260px ;
-
+    .login-container .navbar {
+        width: 100%;
+        bottom: -50px ;
     }
 }
 
